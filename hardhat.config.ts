@@ -13,7 +13,7 @@ const config: HardhatUserConfig = {
     },
   },
   noir: {
-    version: "0.36.0",
+    version: "1.0.0-beta.0",
   },
 };
 
