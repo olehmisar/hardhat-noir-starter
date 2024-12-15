@@ -2,6 +2,8 @@
 
 # Hardhat Noir Starter
 
+Generated from [Noir Hardhat Starter](https://github.com/olehmisar/hardhat-noir-starter).
+
 This project demonstrates Noir integration with Hardhat using [Hardhat Noir](https://github.com/olehmisar/hardhat-noir) plugin.
 
 ## Development
