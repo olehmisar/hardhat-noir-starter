@@ -1,8 +1,10 @@
-// contracts/MyContract.sol
-import {UltraVerifier} from "../noir/target/my_noir.sol";
+// SPDX-License-Identifier: SEE LICENSE IN LICENSE
+pragma solidity ^0.8.27;
+
+import {HonkVerifier} from "../noir/target/my_noir.sol";
 
 contract MyContract {
-    UltraVerifier public verifier = new UltraVerifier();
+    HonkVerifier public verifier = new HonkVerifier();
 
     function verify(
         bytes calldata proof,

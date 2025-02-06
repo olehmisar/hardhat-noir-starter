@@ -11,18 +11,23 @@ it("proves and verifies on-chain", async () => {
   const { noir, backend } = await hre.noir.getCircuit("my_noir");
   const input = { x: 1, y: 2 };
   const { witness } = await noir.execute(input);
-  const { proof, publicInputs } = await backend.generateProof(witness);
+  const { proof, publicInputs } = await backend.generateProof(witness, {
+    keccak: true,
+  });
   // it matches because we marked y as `pub` in `main.nr`
   expect(BigInt(publicInputs[0])).to.eq(BigInt(input.y));
 
   // Verify the proof on-chain
-  const result = await contract.verify(proof, input.y);
+  const result = await contract.verify(proof.slice(4), input.y);
   expect(result).to.eq(true);
 
   // You can also verify in JavaScript.
-  const resultJs = await backend.verifyProof({
-    proof,
-    publicInputs: [String(input.y)],
-  });
+  const resultJs = await backend.verifyProof(
+    {
+      proof,
+      publicInputs: [String(input.y)],
+    },
+    { keccak: true },
+  );
   expect(resultJs).to.eq(true);
 });
