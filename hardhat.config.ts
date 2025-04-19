@@ -1,5 +1,5 @@
 import "@nomicfoundation/hardhat-toolbox";
-import "hardhat-plugin-noir";
+import "hardhat-noir";
 import { HardhatUserConfig } from "hardhat/config";
 
 const config: HardhatUserConfig = {
