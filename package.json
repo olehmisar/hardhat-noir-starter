@@ -6,10 +6,10 @@
     "test": "npx hardhat test"
   },
   "devDependencies": {
-    "@aztec/bb.js": "0.82.3",
-    "@noir-lang/noir_js": "1.0.0-beta.3",
+    "@aztec/bb.js": "0.85.0",
+    "@noir-lang/noir_js": "1.0.0-beta.6",
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
     "hardhat": "^2.22.14",
-    "hardhat-noir": "^0.4.0"
+    "hardhat-noir": "^0.5.0"
   }
 }
