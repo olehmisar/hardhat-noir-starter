@@ -21,6 +21,9 @@ it("proves and verifies on-chain", async () => {
   const result = await contract.verify(proof, input.y);
   expect(result).to.eq(true);
 
+  const gasLimit = await contract.verify.estimateGas(proof, input.y);
+  console.log("Gas limit:", gasLimit.toString());
+
   // You can also verify in JavaScript.
   const resultJs = await backend.verifyProof(
     {
