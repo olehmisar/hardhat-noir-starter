@@ -10,6 +10,6 @@
     "@noir-lang/noir_js": "1.0.0-beta.11",
     "@nomicfoundation/hardhat-toolbox": "^5.0.0",
     "hardhat": "^2.22.14",
-    "hardhat-noir": "^0.5.0"
+    "hardhat-noir": "^0.6.0"
   }
 }
